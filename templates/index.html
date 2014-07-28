@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bdymsApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>The Bdymsi shuffler</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h3 class="text-muted">The Bdymsi Shuffler</h3>
+    </div>
+
+    <div class="jumbotron" ng-controller="BdymsCtrl">
+      <h1>Enter your bdymsi</h1>
+      <p class="lead">
+        The bdymsi should be space separated.
+      </p>
+      <form class="form" role="form">
+        <div class="form-group">
+          <label class="sr-only" for="bdymsi">Bdymsi List</label>
+          <input type="text" class="form-control" id="bdymsi" placeholder="Cryms durdyms nBdyms Plyms" ng-model="bdymsi">
+        </div>
+        <button ng-click="bdyms()" class="btn btn-lg btn-success">Bdym-tsh!</button>
+      </form>
+    </div>
+
+    <div class="footer">
+      <p>&copy; nCrazed 2014</p>
+    </div>
+
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+
+</html>
+
+
